@@ -102,7 +102,7 @@ Controllers.UpdateItemFromNewFav = function (req, res) {
 
 Controllers.deleteItemFromFav = function (req, res) {
   const { index } = req.query.index;
-  UserModel.findByid({ _id: req.params.id }, (err, user) => {
+  UserModel.findById({ _id: req.params.id }, (err, user) => {
     if (err) {
       res.send(err);
     } else {

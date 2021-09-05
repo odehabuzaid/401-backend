@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/finalexam', {
+mongoose.connect(process.env.ATLAS_DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
